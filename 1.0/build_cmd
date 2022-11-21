@@ -1,0 +1,1 @@
+docker build --tag ubuntu_2204:1.0 .

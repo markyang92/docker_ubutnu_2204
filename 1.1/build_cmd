@@ -1,0 +1,1 @@
+docker build --build-arg user=dhyang --build-arg id_u=1000 --build-arg id_g=1000 --tag ubuntu_2204:1.1 .

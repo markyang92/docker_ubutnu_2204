@@ -1,0 +1,13 @@
+version: '3'
+services:
+    dhyang:
+        image: ubuntu_2204:1.1
+        container_name: dhyang
+        #user: dhyang # At first, run as root and set passwd
+        volumes: 
+            - /home/dhyang:/home/dhyang # -V A:B 로 연결할 것 들 명시
+            - /home/dhyang/workspace:/home/dhyang/workspace # -V A:B 로 연결할 것 들 명시
+            - /etc/hosts.allow:/etc/hosts.allow		# /etc/hosts.allow 허락된 host만 접속
+#        privileged: true			# privileged 권한이 있으면, host hacking 위험
+        stdin_open: true			# -i
+        tty: true					# -t
